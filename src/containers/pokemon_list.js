@@ -4,41 +4,33 @@ import { selectPokemon } from "../actions/index";
 import { bindActionCreators } from "redux";
 
 class PokemonList extends Component {
-	renderList() {
-		return this.props.pokemon.map(pokemon => {
-			return (
-				<li
-					key={pokemon.name}
-					onClick={() => this.props.selectPokemon(pokemon)}
-					className="list-group-item"
-				>
-					{pokemon.name}
-				</li>
-			);
-		});
+	renderList(pokemon) {
+		return (
+			<li
+			key={pokemon.name}
+			>
+				{pokemon.name}
+			</li>
+		);
 	}
 
 	render() {
 		return (
 			<ul className="list-group col-sm-4">
-				{this.renderList()}
+				{this.props.pokemon.map(this.renderList)}
 			</ul>
 		);
 	}
 }
 
-function mapStateToProps(state) {
-	// Whatever is returned will show up as props
-	// inside of BookList
-	return {
-		pokemon: state.pokemon
-	};
+function mapStateToProps({pokemon}) {
+	return { pokemon };
 }
 
 // Anything returned from this function will end up as props
 // on the BookList container
 function mapDispatchToProps(dispatch) {
-	// Whenever selectBook is called, the result shoudl be passed
+	// Whenever selectBook is called, the result should be passed
 	// to all of our reducers
 	return bindActionCreators({ selectPokemon: selectPokemon }, dispatch);
 }

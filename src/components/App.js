@@ -4,6 +4,7 @@ import '../style/App.css';
 
 import PokemonList from "../containers/pokemon_list";
 import PokemonDetail from "../containers/pokemon_detail";
+import SearchBar from "../containers/search_bar";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <h2>Pokedex</h2>
         </div>
         <div>
+          <SearchBar />
           <PokemonList />
           <PokemonDetail />
         </div>

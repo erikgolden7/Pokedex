@@ -1,8 +1,15 @@
+import axios from "axios";
+
+
+export const SELECT_POKEMON = "SELECT_POKEMON";
+
 export function selectPokemon(pokemon) {
-	// selectPokemon is an ActionCreator, it needs to return an action,
-	// an object with a type property.
+
+	const url = `http://pokeapi.co/api/v2/pokemon/${pokemon}`;
+	const request = axios.get(url);
+	
 	return {
-		type: "POKEMON_SELECTED",
-		payload: pokemon
+		type: SELECT_POKEMON,
+		payload: request
 	};
 }
