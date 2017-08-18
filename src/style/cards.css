@@ -1,0 +1,19 @@
+.card {
+	border: solid black 1px;
+	border-radius: 5px;
+	width: 150px;
+	height: auto;
+	margin: 10px;
+	padding: 0 5px 30px 5px;
+	}
+
+.img {
+	width: 150px;
+	height: 150px;
+	}
+
+.card_flex {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	}

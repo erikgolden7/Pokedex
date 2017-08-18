@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class PokemonDetail extends Component {
 	render() {
 		if (!this.props.pokemon) {
-			return <div>Select a card to get started.</div>;
+			return <div></div>;
 		}
 		
 		return (

@@ -2,23 +2,27 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { selectPokemon } from "../actions/index";
 import { bindActionCreators } from "redux";
+import '../style/cards.css';
 
 class PokemonList extends Component {
 	renderList(pokemon) {
+	console.log(pokemon);
 		return (
-			<li
-			key={pokemon.name}
-			>
-				{pokemon.name}
-			</li>
+			<div key={pokemon.name} className="card">
+				<img className="img" src={pokemon.sprites.front_default}/>
+				<div> # {pokemon.id} </div>
+				<div> Name: {pokemon.name} </div>
+				<div> Type: {pokemon.types[0].type.name} </div>
+			</div>
+		
 		);
 	}
 
 	render() {
 		return (
-			<ul className="list-group col-sm-4">
+			<div className="card_flex">
 				{this.props.pokemon.map(this.renderList)}
-			</ul>
+			</div>
 		);
 	}
 }
