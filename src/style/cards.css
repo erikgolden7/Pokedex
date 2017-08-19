@@ -2,18 +2,97 @@
 	border: solid black 1px;
 	border-radius: 5px;
 	width: 150px;
-	height: auto;
+	height: 200px;
 	margin: 10px;
-	padding: 0 5px 30px 5px;
+	padding: 5px 5px 30px 5px;
+	box-shadow: 5px 5px 3px #888888;
 	}
 
 .img {
-	width: 150px;
-	height: 150px;
+	width: 173px;
+	height: 114px;
+	background-color: white;
+	margin-top: 3px;
+	}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 100px;
+	height: 100px;
+	}
+
+.num {
+	display: -ms-flexbox;
+	width: 32px;
+	float: left;
+	font-size: 13px;
+	margin: -5px 0 0 11px;
+	height: 20px;
+	}
+
+.name {
+	width: 116px;
+	margin-left: 48px;
+	text-align: left;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding-left: 4px;
+	background-color: rgba(255, 255, 255, 0.5);
 	}
 
 .card_flex {
 	display: flex;
 	flex-direction: row;
 	flex-flow: wrap;
+	}
+
+.water1 {
+	background: url("../../src/images/water1.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.electric1 {
+	background: url("../../src/images/electric1.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.fire1 {
+	background: url("../../src/images/fire1.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.grass1 {
+	background: url("../../src/images/grass1.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.fighting {
+	background: url("../../src/images/fighting.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.flying {
+	background: url("../../src/images/colorless.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.psychic {
+	background: url("../../src/images/psychic.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
 	}
