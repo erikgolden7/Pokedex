@@ -3,21 +3,16 @@ import { connect } from "react-redux";
 import { selectPokemon } from "../actions/index";
 import { bindActionCreators } from "redux";
 import '../style/cards.css';
+// import PokeCard from '../components/pokemon_card.js'
 
 class PokemonList extends Component {
 	
+	
 	renderList(pokemon) {
-	console.log(pokemon);
 		
-		// const name = cityData.city.name;
-		// const temps = cityData.list.map(weather => weather.main.temp);
-		// const pressures = cityData.list.map(weather => weather.main.pressure);
-		// const humidities = cityData.list.map(weather => weather.main.humidity);
-		// const { lon, lat } = cityData.city.coord;
 		const uppercaseName = pokemon.name[0].toUpperCase() + pokemon.name.substring(1)
 		
 		
-	
 	if(pokemon.types[0].type.name === "water"){
 		return (
 			<div key={pokemon.name} className="card water1">
@@ -118,14 +113,7 @@ class PokemonList extends Component {
 			</div>
 		);
 	}
-		return (
-			<div key={pokemon.name} className="card">
-				<img className="img" src={pokemon.sprites.front_default}/>
-				<div> # {pokemon.id} </div>
-				<div> Name: {uppercaseName} </div>
-				<div> Type: {(pokemon.types[1] !== undefined) ? pokemon.types[0].type.name + "/" + pokemon.types[1].type.name : pokemon.types[0].type.name} </div>
-			</div>
-		);
+
 	}
 
 	render() {
@@ -141,15 +129,10 @@ function mapStateToProps({pokemon}) {
 	return { pokemon };
 }
 
-// Anything returned from this function will end up as props
-// on the BookList container
+
 function mapDispatchToProps(dispatch) {
-	// Whenever selectBook is called, the result should be passed
-	// to all of our reducers
 	return bindActionCreators({ selectPokemon: selectPokemon }, dispatch);
 }
 
-// Promote BookList from a component to a container - it needs to know
-// about this new dispatch method, selectBook. Make it available
-// as a prop.
+
 export default connect(mapStateToProps, mapDispatchToProps)(PokemonList);

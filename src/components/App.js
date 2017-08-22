@@ -3,7 +3,6 @@ import logo from '../images/logo.png';
 import '../style/App.css';
 
 import PokemonList from "../containers/pokemon_list";
-import PokemonDetail from "../containers/pokemon_detail";
 import SearchBar from "../containers/search_bar";
 
 class App extends Component {
@@ -17,7 +16,6 @@ class App extends Component {
         <div>
           <SearchBar />
           <PokemonList />
-          <PokemonDetail />
         </div>
       </div>
     );
