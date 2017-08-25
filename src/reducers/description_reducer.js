@@ -1,8 +1,8 @@
-import { SELECT_POKEMON } from "../actions/index";
+import { POKEMON_DESCRIPTION } from "../actions/index";
 
 export default function(state = [], action) {
 	switch (action.type) {
-		case SELECT_POKEMON:
+		case POKEMON_DESCRIPTION:
 			console.log(action);
 			if(action.error) {
 				return;

@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Pokedex</h2>
+          <h2>Pokemon Cards</h2>
         </div>
         <div>
           <SearchBar />

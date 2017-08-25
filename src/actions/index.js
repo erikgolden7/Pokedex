@@ -2,6 +2,7 @@ import axios from "axios";
 
 
 export const SELECT_POKEMON = "SELECT_POKEMON";
+export const POKEMON_DESCRIPTION = "POKEMON_DESCRIPTION";
 
 export function selectPokemon(pokemon) {
 	
@@ -13,6 +14,19 @@ export function selectPokemon(pokemon) {
 	return {
 		type: SELECT_POKEMON,
 		payload: request
+	};
+}
+
+export function pokemonDescription(pokemon) {
+	
+	const url1 = `http://pokeapi.co/api/v2/pokemon-species/${pokemon}`;
+	const desc = axios.get(url1);
+	
+	console.log(desc);
+	
+	return {
+		type: POKEMON_DESCRIPTION,
+		payload: desc
 	};
 }
 
