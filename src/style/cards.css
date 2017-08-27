@@ -24,11 +24,11 @@
 	}
 
 .num {
-	display: -ms-flexbox;
-	width: 32px;
-	float: left;
-	font-size: 13px;
-	margin: -5px 0 0 11px;
+	width: 37px;
+	float: right;
+	font-size: 11px;
+	padding-right: 20px;
+	margin-top: -136px;
 	height: 20px;
 	}
 
@@ -38,8 +38,9 @@
 	text-align: left;
 	font-family: sans-serif;
 	font-weight: bold;
+	font-size: 14px;
 	padding-left: 4px;
-	background-color: rgba(255, 255, 255, 0.5);
+	/*background-color: rgba(255, 255, 255, 0.3);*/
 	}
 
 .move {
@@ -119,6 +120,28 @@
 	background-size: cover;
 	width: 200px;
 	height: 250px;
+	}
+
+.steel {
+	background: url("../../src/images/steel.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.fairy {
+	background: url("../../src/images/fairy.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	}
+
+.dark {
+	background: url("../../src/images/dark.png") center no-repeat;
+	background-size: cover;
+	width: 200px;
+	height: 250px;
+	color: white;
 	}
 
 .colorless_icon {

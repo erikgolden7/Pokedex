@@ -7,63 +7,78 @@ import '../style/cards.css';
 
 
 function findElement(pokemon){
-	var element = "";
-	if(pokemon.types[0].type.name === "water"){
-		element = "card water1";
-		return element;
-	}
-	else if(pokemon.types[0].type.name === "poison" && pokemon.types[1].type.name === "ghost"){
+	let element = "";
+	const name1 = pokemon.types[0].type.name;
+	// const name2 = pokemon.types[1].type.name;
+	
+	console.log(name1);
+	if(name1 === "poison" && pokemon.types[1].type.name === "ghost"){
 		element = 'card psychic';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "flying" && pokemon.types[1].type.name === "fire"){
+	else if(name1 === "flying" && pokemon.types[1].type.name === "fire"){
 		element = 'card fire1';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "flying" && pokemon.types[1].type.name === "water"){
+	else if(name1 === "flying" && pokemon.types[1].type.name === "water"){
 		element = 'card water1';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "electric"){
+	else if(name1 === "water"){
+		element = "card water1";
+		return element;
+	}
+	else if(name1 === "electric"){
 		element = 'card electric1';
 		return element;
-	}	else if(pokemon.types[0].type.name === "fire"){
+	}
+	else if(name1 === "fire"){
 		element = 'card fire1';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "grass" || pokemon.types[0].type.name === "bug" || pokemon.types[0].type.name === "poison"){
+	else if(name1 === "grass" || name1 === "bug" || name1 === "poison"){
 		element = 'card grass1';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "flying"){
+	else if(name1 === "flying" || name1 === "normal" || name1 === "dragon"){
 		element = 'card flying';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "fighting" || pokemon.types[0].type.name === "ground"){
+	else if(name1 === "fighting" || name1 === "ground"){
 		element = 'card fighting';
 		return element;
 	}
-	else if(pokemon.types[0].type.name === "psychic"){
+	else if(name1 === "psychic"){
 		element = 'card psychic';
+		return element;
+	}
+	else if(name1 === "dark"){
+		element = 'card dark';
+		return element;
+	}
+	else if(name1 === "steel"){
+		element = 'card steel';
+		return element;
+	}
+	else if(name1 === "fairy"){
+		element = 'card fairy';
 		return element;
 	}
 }
 
 function cardInfo(pokemon){
 	const uppercaseName = pokemon.name[0].toUpperCase() + pokemon.name.substring(1);
-	
 	return (
 		<div >
 			<div className="name"> {uppercaseName} </div>
 			<img className="img" alt="pokemon" src={pokemon.sprites.front_default} />
-			<div className="num"> # {pokemon.id} </div>
+			<div className="num"> #{pokemon.id} </div>
 			<div className="move"> {(pokemon.abilities[1]) ? <div><div>{pokemon.abilities[0].ability.name}</div><br/> <div>{pokemon.abilities[1].ability.name}</div></div> : pokemon.abilities[0].ability.name} </div>
 			<div className="type"> {(pokemon.types[1]) ? pokemon.types[0].type.name + "/" + pokemon.types[1].type.name : pokemon.types[0].type.name} </div>
 			<div className="colorless_icon"></div>
 		</div>
 	)
 }
-
 
 class PokemonList extends Component {
 	
@@ -75,12 +90,10 @@ class PokemonList extends Component {
 		)
 	}
 	
-	
 	render() {
 		return (
 			<div className="card_flex" >
 				{this.props.pokemon.map(this.renderList)}
-
 			</div>
 		);
 	}
@@ -93,10 +106,8 @@ function mapStateToProps({pokemon, description}) {
 	}
 }
 
-
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ selectPokemon: selectPokemon, pokemonDescription: pokemonDescription }, dispatch);
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(PokemonList);
