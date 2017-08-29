@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-	      {this.props.children}
+	      <div className="home-img"></div>
       </div>
     );
   }

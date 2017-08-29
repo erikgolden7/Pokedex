@@ -3,9 +3,6 @@ import logo from '../images/logo.png';
 import { Link } from 'react-router-dom';
 import '../style/App.css';
 
-import PokemonList from "../containers/pokemon_list";
-import SearchBar from "../containers/search_bar";
-
 class Nav extends Component {
 	render() {
 		return (

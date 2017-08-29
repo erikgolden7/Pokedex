@@ -1,5 +1,28 @@
 .background {
 	background: url('../../src/images/pokedex.png') center no-repeat;
-	width: 100%;
-	height: 120vh;
+	position: fixed;
+	width: 800px;
+	height: 600px;
+	top: 40%;
+	left: 40%;
+	margin-top: -160px; /* Negative half of height. */
+	margin-left: -250px; /* Negative half of width. */
+	}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	}
+th, td {
+	padding: 15px;
+	}
+
+.table{
+	position: absolute;
+	top: 153px;
+	left: 29px;
+	width: 332px;
+	height: 337px;
+	max-height: 337px;
+	max-width: 332px;
 	}

@@ -27,10 +27,10 @@ class SearchBar extends Component {
 	
 	render() {
 		return (
-			<form onSubmit={this.onFormSubmit} className="input-group">
+			<form onSubmit={(this.state.term) ? this.onFormSubmit : ""} className="input-group">
 				<input
-					placeholder="Search for a pokemon"
-					className="form-control"
+					placeholder="Search for a pokemon..."
+					className="form-control searchbar"
 					value={this.state.term}
 					onChange={this.onInputChange}
 				/>

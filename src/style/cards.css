@@ -1,3 +1,13 @@
+.card-search{
+	text-align: center;
+	}
+
+.searchbar{
+	width: 165px;
+	font-size: 14px;
+	margin-bottom: 15px;
+	}
+
 .card {
 	border: solid black 1px;
 	border-radius: 5px;
@@ -73,71 +83,71 @@
 	flex-flow: wrap;
 	}
 
-.water1 {
-	background: url("../../src/images/water1.png") center no-repeat;
+.water {
+	background: url("../images/water.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
-.electric1 {
-	background: url("../../src/images/electric1.png") center no-repeat;
+.electric {
+	background: url("../images/electric.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
-.fire1 {
-	background: url("../../src/images/fire1.png") center no-repeat;
+.fire {
+	background: url("../images/fire.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
-.grass1 {
-	background: url("../../src/images/grass1.png") center no-repeat;
+.grass {
+	background: url("../images/grass.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .fighting {
-	background: url("../../src/images/fighting.png") center no-repeat;
+	background: url("../images/fighting.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .flying {
-	background: url("../../src/images/colorless.png") center no-repeat;
+	background: url("../images/colorless.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .psychic {
-	background: url("../../src/images/psychic.png") center no-repeat;
+	background: url("../images/psychic.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .steel {
-	background: url("../../src/images/steel.png") center no-repeat;
+	background: url("../images/steel.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .fairy {
-	background: url("../../src/images/fairy.png") center no-repeat;
+	background: url("../images/fairy.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
 	}
 
 .dark {
-	background: url("../../src/images/dark.png") center no-repeat;
+	background: url("../images/dark.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
