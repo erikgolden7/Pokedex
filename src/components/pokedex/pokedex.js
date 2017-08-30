@@ -2,6 +2,10 @@
 import React, { Component } from 'react';
 import Nav from "../nav.js"
 import '../../style/pokedex.css';
+import PokedexList from './pokedex_list';
+import { pokemonList } from "../../actions/index";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 
 class Pokedex extends Component {
@@ -12,28 +16,7 @@ class Pokedex extends Component {
 				<p className="page-title">Pokedex</p>
 				<div className="background">
 				 <div>
-					 <table className="table">
-						 <tr>
-							 <th>Name</th>
-							 <th>Type 1</th>
-							 <th>Type 2</th>
-						 </tr>
-						 <tr>
-							 <td>Pikachu</td>
-							 <td>Lightning</td>
-							 <td>None</td>
-						 </tr>
-						 <tr>
-							 <td>Squirtle</td>
-							 <td>Water</td>
-							 <td>None</td>
-						 </tr>
-						 <tr>
-							 <td>Charizard</td>
-							 <td>Flying</td>
-							 <td>Fire</td>
-						 </tr>
-					 </table>
+					 <PokedexList/>
 				 </div>
 				</div>
 			</div>
@@ -41,4 +24,15 @@ class Pokedex extends Component {
 	}
 }
 
-export default Pokedex;
+
+function mapStateToProps({list}) {
+	return {
+		list
+	}
+}
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({ pokemonList: pokemonList }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pokedex);

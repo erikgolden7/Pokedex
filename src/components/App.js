@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav from "./nav.js"
 import '../style/App.css';
 
-import PokemonList from "../containers/pokemon_list";
+import PokemonList from "./cards/pokemon_list";
 import SearchBar from "../containers/search_bar";
 
 class App extends Component {

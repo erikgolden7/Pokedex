@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { selectPokemon } from "../actions/index";
-import { pokemonDescription } from "../actions/index";
+import { selectPokemon } from "../../actions/index";
+import { pokemonDescription } from "../../actions/index";
 import { bindActionCreators } from "redux";
-import '../style/cards.css';
+import '../../style/cards.css';
 
 
 function findElement(pokemon){

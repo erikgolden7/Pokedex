@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Nav from "../nav.js"
 import '../../style/App.css';
 
-import PokemonList from "../../containers/pokemon_list.js";
+import PokemonList from "./pokemon_list.js";
 import SearchBar from "../../containers/search_bar";
 
 class Cards extends Component {

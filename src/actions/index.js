@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const SELECT_POKEMON = "SELECT_POKEMON";
 export const POKEMON_DESCRIPTION = "POKEMON_DESCRIPTION";
+export const POKEMON_LIST = "POKEMON_LIST";
 
 export function selectPokemon(pokemon) {
 	
@@ -27,6 +28,17 @@ export function pokemonDescription(pokemon) {
 	return {
 		type: POKEMON_DESCRIPTION,
 		payload: desc
+	};
+}
+
+export function pokemonList () {
+	const list = axios.get('http://pokeapi.co/api/v2/pokemon/?limit=811');
+	
+	console.log(list);
+	
+	return{
+		type: POKEMON_LIST,
+		payload: list
 	};
 }
 
