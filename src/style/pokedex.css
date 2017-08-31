@@ -38,3 +38,13 @@ th, td {
 .name{
 	width: 130px;
 	}
+
+.detail-box {
+	position: absolute;
+	top: 169px;
+	left: 475px;
+	border-radius: 4px;
+	background-color: white;
+	width: 279px;
+	height: 359px;
+	}

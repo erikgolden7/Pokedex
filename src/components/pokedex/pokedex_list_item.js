@@ -1,9 +1,10 @@
 import React from 'react';
+
 var id = 0;
-const PokedexListItem = ({pokemon}) => {
+const PokedexListItem = ({pokemon, onPokemonSelect}) => {
 	id++;
 	return (
-		<li>
+		<li onClick={() => onPokemonSelect(pokemon)}>
 			<tr>
 				<td className="id">{id}</td>
 				<td className="name">{pokemon.name}</td>

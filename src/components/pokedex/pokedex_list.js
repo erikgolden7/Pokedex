@@ -1,35 +1,36 @@
-import React, {Component} from 'react';
-import axios from "axios";
+import React from 'react';
+// import axios from "axios";
 import PokedexListItem from './pokedex_list_item';
 
 
-
-class PokedexList extends Component {
-	constructor(props){
-		super(props);
-		
-		this.state = {
-			list: []
-		}
-	}
+const PokedexList = props => {
+// class PokedexList extends Component {
+	// constructor(props){
+	// 	super(props);
+	//
+	// 	this.state = {
+	// 		list: [],
+	// 		// selectedPokemon: null
+	// 	}
+	// }
 	
-	componentWillMount() {
-		axios.get('http://pokeapi.co/api/v2/pokemon/?limit=811')
-		.then((result) => {
-			// console.log(result);
-			const list = result.data.results;
-			this.setState({list: list});
-			console.log(this.state.list);
-		})
-	}
+	// componentWillMount() {
+	// 	axios.get('http://pokeapi.co/api/v2/pokemon/?limit=811')
+	// 	.then((result) => {
+	// 		// console.log(result);
+	// 		const list = result.data.results;
+	// 		this.setState({list: list});
+	// 		console.log(this.state.list);
+	// 	})
+	// }
 	
-	render() {
-		const pokemonList = this.state.list.map(pokemon => {
+	// render() {
+		const pokemonList = props.pokemon.map(pokemon => {
 			return (
 				<PokedexListItem
 					key={pokemon.name}
 					pokemon={pokemon}
-				  // id={id}
+					onPokemonSelect={props.onPokemonSelect}
 				/>
 			);
 		});
@@ -46,7 +47,7 @@ class PokedexList extends Component {
 			</ul>
 		);
 		
-	}
+	// }
 	
 }
 
