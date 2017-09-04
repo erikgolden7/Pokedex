@@ -18,10 +18,8 @@ export function selectPokemon(pokemon) {
 	};
 }
 
-export function pokemonDescription(pokemon) {
-	
-	const url1 = `http://pokeapi.co/api/v2/pokemon-species/${pokemon}`;
-	const desc = axios.get(url1);
+export function pokemonDescription(pokemonUrl) {
+	const desc = axios.get(pokemonUrl);
 	
 	console.log(desc);
 	

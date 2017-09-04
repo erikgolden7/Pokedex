@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Nav from "../nav.js"
 import '../../style/pokedex.css';
@@ -26,6 +25,7 @@ class Pokedex extends Component {
 			const list = result.data.results;
 			this.setState({list: list});
 			console.log(this.state.list);
+			console.log(this.state.selectedPokemon);
 		})
 	}
 	
@@ -36,15 +36,15 @@ class Pokedex extends Component {
 				<Nav/>
 				<p className="page-title">Pokedex</p>
 				<div className="background">
-
-					 <PokedexList
-						 onPokemonSelect={selectedPokemon => this.setState({ selectedPokemon })}
-					   pokemon={this.state.list}
-					 />
-					 <PokedexDetail
-						 pokemon={this.state.selectedPokemon}
-					 />
-
+					
+					<PokedexList
+						onPokemonSelect={selectedPokemon => this.setState({ selectedPokemon })}
+						pokemon={this.state.list}
+					/>
+					<PokedexDetail
+						pokemon={this.state.selectedPokemon}
+					/>
+				
 				</div>
 			</div>
 		);

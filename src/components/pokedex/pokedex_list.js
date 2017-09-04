@@ -25,30 +25,34 @@ const PokedexList = props => {
 	// }
 	
 	// render() {
-		const pokemonList = props.pokemon.map(pokemon => {
-			return (
-				<PokedexListItem
-					key={pokemon.name}
-					pokemon={pokemon}
-					onPokemonSelect={props.onPokemonSelect}
-				/>
-			);
-		});
-		
+	const pokemonList = props.pokemon.map(pokemon => {
 		return (
-			<ul className="table">
-				<tr>
-					<th className="id">Id</th>
-					<th className="name">Name</th>
-					<th>Type 1</th>
-					<th>Type 2</th>
-				</tr>
-				{pokemonList}
-			</ul>
+			<PokedexListItem
+				key={pokemon.name}
+				pokemon={pokemon}
+				onPokemonSelect={props.onPokemonSelect}
+			/>
 		);
-		
+	});
+	
+	return (
+		<ul className="table">
+			<tr>
+				<th className="id">Id</th>
+				<th className="name">Name</th>
+				<th>Type 1</th>
+				<th>Type 2</th>
+			</tr>
+			{pokemonList}
+		</ul>
+	);
+	
 	// }
 	
 }
 
 export default PokedexList;
+
+
+
+

@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './components/App';
 import Pokedex from './components/pokedex/pokedex';
 import Cards from './components/cards/cards';
-import { Link } from 'react-router-dom';
 import reducers from "./reducers";
 import './style/index.css';
 import registerServiceWorker from './js/registerServiceWorker';
