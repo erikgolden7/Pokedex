@@ -1,17 +1,21 @@
 import React from 'react';
 
-var id = 0;
+
+const max = 811;
+let id = 0;
 const PokedexListItem = ({pokemon, onPokemonSelect}) => {
-	id++;
+
+	if(id <= max){
+		id++
+	}
+	// id++;
 	return (
-		<li onClick={() => onPokemonSelect(pokemon)}>
-			<tr>
-				<td className="id">{id}</td>
-				<td className="name">{pokemon.name}</td>
-				<td>None</td>
-				<td>None</td>
-			</tr>
-		</li>
+		<tr onClick={() => onPokemonSelect(pokemon)}>
+			<td className="id">{id}</td>
+			<td className="name">{pokemon.name}</td>
+			<td>None</td>
+			<td>None</td>
+		</tr>
 	);
 	
 };

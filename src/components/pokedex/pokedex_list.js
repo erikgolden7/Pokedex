@@ -36,15 +36,13 @@ const PokedexList = props => {
 	});
 	
 	return (
-		<ul className="table">
-			<tr>
-				<th className="id">Id</th>
-				<th className="name">Name</th>
-				<th>Type 1</th>
-				<th>Type 2</th>
-			</tr>
+		<tr className="table">
+			<th className="id">Id</th>
+			<th className="name">Name</th>
+			<th>Type 1</th>
+			<th>Type 2</th>
 			{pokemonList}
-		</ul>
+		</tr>
 	);
 	
 	// }

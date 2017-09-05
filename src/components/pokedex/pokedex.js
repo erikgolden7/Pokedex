@@ -21,7 +21,6 @@ class Pokedex extends Component {
 	componentWillMount() {
 		axios.get('http://pokeapi.co/api/v2/pokemon/?limit=811')
 		.then((result) => {
-			// console.log(result);
 			const list = result.data.results;
 			this.setState({list: list});
 			console.log(this.state.list);
@@ -36,15 +35,13 @@ class Pokedex extends Component {
 				<Nav/>
 				<p className="page-title">Pokedex</p>
 				<div className="background">
-					
 					<PokedexList
 						onPokemonSelect={selectedPokemon => this.setState({ selectedPokemon })}
 						pokemon={this.state.list}
 					/>
 					<PokedexDetail
-						pokemon={this.state.selectedPokemon}
+						selectedPokemon={this.state.selectedPokemon}
 					/>
-				
 				</div>
 			</div>
 		);
