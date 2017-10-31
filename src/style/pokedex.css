@@ -13,6 +13,8 @@ table,
 th,
 td {
 	border: 1px solid black;
+	border-bottom: 1px;
+	border-left: 1px;
 	border-collapse: collapse;
 }
 th,
@@ -24,21 +26,29 @@ td {
 
 .table {
 	position: absolute;
-	top: 153px;
-	left: 29px;
+	top: 29px;
+	left: 0px;
 	width: 332px;
-	height: 336px;
+	height: 307px;
 	max-height: 336px;
 	max-width: 332px;
 	overflow-y: scroll;
 	list-style-type: none;
 }
 
+.table-header {
+	position: absolute;
+	top: 153px;
+	left: 30px;
+}
+
 .id-header {
 	position: fixed;
-	width: 22px;
+	width: 21px;
 	height: 16px;
 	background-color: white;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
 }
 
 .name-header {
@@ -47,6 +57,7 @@ td {
 	width: 284px;
 	height: 16px;
 	background-color: white;
+	border-bottom: 1px solid black;
 }
 
 .tbl-name {

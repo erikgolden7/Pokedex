@@ -19,10 +19,9 @@ class Pokedex extends Component {
 	}
 
 	componentWillMount() {
-		axios.get("https://pokeapi.co/api/v1/pokedex/1/").then(result => {
-			const list = result.data.pokemon;
-			console.log(list);
-			this.setState({ list: list });
+		axios.get("https://pokeapi.co/api/v2/pokemon/?limit=949").then(result => {
+			console.log(result.data.results);
+			this.setState({ list: result.data.results });
 		});
 	}
 

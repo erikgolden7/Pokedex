@@ -13,24 +13,27 @@ const PokedexList = props => {
 	// 	}
 	// }
 
-	console.log(props.pokemon);
+	// console.log(props.pokemon);
 
 	// render() {
-	const pokemonList = props.pokemon.map(pokemon => {
+
+	const pokemonList = props.pokemon.map((pokemon, i) => {
+		// console.log(i);
 		return (
 			<PokedexListItem
 				key={pokemon.name}
 				pokemon={pokemon}
+				id={i}
 				onPokemonSelect={props.onPokemonSelect}
 			/>
 		);
 	});
 
 	return (
-		<div className="table">
+		<div className="table-header">
 			<th className="id-header">Id</th>
 			<th className="name-header">Name</th>
-			{pokemonList}
+			<div className="table">{pokemonList}</div>
 		</div>
 	);
 

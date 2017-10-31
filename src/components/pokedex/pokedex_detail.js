@@ -26,7 +26,7 @@ class PokedexDetail extends Component {
 
 	setPicture = ({ sprites }) => {
 		this.setState({ picture: sprites.front_default });
-		if (sprites.back_default) {
+		if (sprites.back_default !== null) {
 			this.setState({ picture_back: sprites.back_default });
 		}
 		if (!sprites.back_default) {
