@@ -18,9 +18,43 @@ class PokedexDetail extends Component {
 			id: 0,
 			type1: "",
 			type2: null,
-			weight: 0
+			weight: 0,
+			ability1: "",
+			ability2: ""
 		};
 	}
+
+	setPicture = ({ sprites }) => {
+		this.setState({ picture: sprites.front_default });
+		if (sprites.back_default) {
+			this.setState({ picture_back: sprites.back_default });
+		}
+		if (!sprites.back_default) {
+			this.setState({ picture_back: null });
+		}
+	};
+
+	setType = ({ types }) => {
+		if (types.length === 1) {
+			this.setState({ type1: types[0].type.name });
+			this.setState({ type2: null });
+		}
+		if (types.length === 2) {
+			this.setState({ type1: types[0].type.name });
+			this.setState({ type2: types[1].type.name });
+		}
+	};
+
+	setAbilities = ({ abilities }) => {
+		if (abilities.length === 1) {
+			this.setState({ ability1: abilities[0].ability.name });
+			this.setState({ ability2: null });
+		}
+		if (abilities.length > 1) {
+			this.setState({ ability1: abilities[0].ability.name });
+			this.setState({ ability2: abilities[1].ability.name });
+		}
+	};
 
 	selectedPokemonInfo(pokemon) {
 		if (this.state.prev !== pokemon.name) {
@@ -28,37 +62,41 @@ class PokedexDetail extends Component {
 
 			axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`).then(result => {
 				console.log(result.data);
-				const { name, sprites, id, types, weight } = result.data;
+				const { name, sprites, id, types, weight, abilities } = result.data;
 				this.setState({ name: name });
-				this.setState({ picture: sprites.front_default });
-				if (sprites.back_default) {
-					this.setState({ picture_back: sprites.back_default });
-				}
-
+				this.setPicture({ sprites });
 				this.setState({ id: id });
 				this.setState({ weight: weight });
-				if (types.length === 1) {
-					this.setState({ type1: types[0].type.name });
-					this.setState({ type2: null });
-				}
-				if (types.length === 2) {
-					this.setState({ type1: types[0].type.name });
-					this.setState({ type2: types[1].type.name });
-				}
+				this.setType({ types });
+				this.setAbilities({ abilities });
 			});
 		}
 
 		return (
 			<div className="detail-box">
-				<img className="img" src={this.state.picture} />
-				{this.state.picture_back ? <img className="img" src={this.state.picture_back} /> : ""}
-				<div> name: {this.state.name} </div>
-				<div> Id: {this.state.id} </div>
-				<div> Weight: {this.state.weight} </div>
-				<div> Type: {this.state.type1}</div>
-				{this.state.type2 ? <div> Type 2: {this.state.type2} </div> : ""}
-				{/* <div> Type 1: {this.state.type2} </div> */}
-				{/* <div> Type 1: {this.state.description.types[1]} </div> */}
+				<div className="img-container">
+					<img className="img" alt="" src={this.state.picture} />
+					{this.state.picture_back ? (
+						<img className="img" alt="" src={this.state.picture_back} />
+					) : (
+						""
+					)}
+				</div>
+				<div className="detail-text">
+					<div> Id: {this.state.id} </div>
+					<div> name: {this.state.name} </div>
+					{this.state.type2 ? (
+						<div>
+							{" "}
+							Type: {this.state.type1}/{this.state.type2}{" "}
+						</div>
+					) : (
+						<div> Type: {this.state.type1}</div>
+					)}
+					<div> Weight: {this.state.weight} </div>
+					<div>Ability: {this.state.ability1}</div>
+					{this.state.ability2 ? <div>Ability 2: {this.state.ability2}</div> : ""}
+				</div>
 			</div>
 		);
 	}

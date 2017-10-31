@@ -1,12 +1,12 @@
-.card-search{
+.card-search {
 	text-align: center;
-	}
+}
 
-.searchbar{
+.searchbar {
 	width: 165px;
 	font-size: 14px;
 	margin-bottom: 15px;
-	}
+}
 
 .card {
 	border: solid black 1px;
@@ -16,14 +16,14 @@
 	margin: 10px;
 	padding: 5px 5px 30px 5px;
 	box-shadow: 5px 5px 3px #888888;
-	}
+}
 
 .img {
 	width: 173px;
 	height: 114px;
 	background-color: white;
 	margin-top: 3px;
-	}
+}
 
 .desc {
 	display: flex;
@@ -31,7 +31,7 @@
 	justify-content: flex-end;
 	width: 100px;
 	height: 100px;
-	}
+}
 
 .num {
 	width: 37px;
@@ -40,10 +40,10 @@
 	padding-right: 20px;
 	margin-top: -136px;
 	height: 20px;
-	}
+}
 
 .name {
-	width: 130px;
+	width: 284px;
 	margin-left: 43px;
 	text-align: left;
 	font-family: sans-serif;
@@ -51,10 +51,14 @@
 	font-size: 14px;
 	padding-left: 4px;
 	/*background-color: rgba(255, 255, 255, 0.3);*/
-	}
+}
+
+.name:hover {
+	background-color: rgb(255, 194, 194);
+}
 
 .move {
-	width: 140px;
+	rgb(255, 198, 198): 140px;
 	height: 24px;
 	margin-left: 13px;
 	margin-top: 20px;
@@ -64,87 +68,87 @@
 	font-family: sans-serif;
 	font-weight: 500;
 	font-size: 14px;
-	border-top: solid .5px black;
-	border-bottom: solid .5px black;
-	}
+	border-top: solid 0.5px black;
+	border-bottom: solid 0.5px black;
+}
 
-.type{
+.type {
 	width: 125px;
 	float: right;
 	font-family: sans-serif;
 	padding-top: 56px;
 	padding-bottom: 10px;
 	font-size: 10px;
-	}
+}
 
 .card_flex {
 	display: flex;
 	flex-direction: row;
 	flex-flow: wrap;
-	}
+}
 
 .water {
 	background: url("../images/water.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .electric {
 	background: url("../images/electric.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .fire {
 	background: url("../images/fire.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .grass {
 	background: url("../images/grass.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .fighting {
 	background: url("../images/fighting.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .flying {
 	background: url("../images/colorless.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .psychic {
 	background: url("../images/psychic.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .steel {
 	background: url("../images/steel.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .fairy {
 	background: url("../images/fairy.png") center no-repeat;
 	background-size: cover;
 	width: 200px;
 	height: 250px;
-	}
+}
 
 .dark {
 	background: url("../images/dark.png") center no-repeat;
@@ -152,7 +156,7 @@
 	width: 200px;
 	height: 250px;
 	color: white;
-	}
+}
 
 .colorless_icon {
 	background: url("../../src/images/colorless_icon.png") center no-repeat;
@@ -161,4 +165,4 @@
 	height: 16px;
 	margin-left: 25px;
 	margin-top: 6px;
-	}
+}

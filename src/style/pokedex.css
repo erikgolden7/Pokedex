@@ -1,5 +1,5 @@
 .background {
-	background: url('../../src/images/pokedex.png') center no-repeat;
+	background: url("../../src/images/pokedex.png") center no-repeat;
 	position: fixed;
 	width: 800px;
 	height: 600px;
@@ -7,19 +7,22 @@
 	left: 40%;
 	margin-top: -160px; /* Negative half of height. */
 	margin-left: -250px; /* Negative half of width. */
-	}
+}
 
-table, th, td {
+table,
+th,
+td {
 	border: 1px solid black;
 	border-collapse: collapse;
-	}
-th, td {
+}
+th,
+td {
 	padding: 6px;
-	width: 63px;
+	width: 21px;
 	font-size: 12px;
-	}
+}
 
-.table{
+.table {
 	position: absolute;
 	top: 153px;
 	left: 29px;
@@ -29,15 +32,37 @@ th, td {
 	max-width: 332px;
 	overflow-y: scroll;
 	list-style-type: none;
-	}
+}
 
-.id{
+.id-header {
+	position: fixed;
 	width: 22px;
-	}
+	height: 16px;
+	background-color: white;
+}
 
-.name{
-	width: 130px;
-	}
+.name-header {
+	position: fixed;
+	margin-left: 34px;
+	width: 284px;
+	height: 16px;
+	background-color: white;
+}
+
+.tbl-name {
+	width: 284px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.tbl-row:hover {
+	background-color: rgb(255, 226, 226);
+	cursor: pointer;
+}
+
+.tbl-id {
+	text-align: center;
+}
 
 .detail-box {
 	position: absolute;
@@ -48,4 +73,24 @@ th, td {
 	width: 259px;
 	height: 338px;
 	padding: 10px;
-	}
+}
+
+.detail-text {
+	font-size: 16px;
+	line-height: 21px;
+	padding: 10px 5px;
+}
+
+.img-container {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+.img {
+	width: 173px;
+	height: 114px;
+	background-color: white;
+	margin-top: 3px;
+	border: solid gray 1px;
+}
