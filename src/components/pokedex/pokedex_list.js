@@ -3,22 +3,7 @@ import React from "react";
 import PokedexListItem from "./pokedex_list_item";
 
 const PokedexList = props => {
-	// class PokedexList extends Component {
-	// constructor(props){
-	// 	super(props);
-	//
-	// 	this.state = {
-	// 		list: [],
-	// 		// selectedPokemon: null
-	// 	}
-	// }
-
-	// console.log(props.pokemon);
-
-	// render() {
-
 	const pokemonList = props.pokemon.map((pokemon, i) => {
-		// console.log(i);
 		return (
 			<PokedexListItem
 				key={pokemon.name}
@@ -36,8 +21,6 @@ const PokedexList = props => {
 			<div className="table">{pokemonList}</div>
 		</div>
 	);
-
-	// }
 };
 
 export default PokedexList;

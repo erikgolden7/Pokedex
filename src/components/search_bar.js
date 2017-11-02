@@ -9,11 +9,12 @@ class SearchBar extends Component {
 
 		this.state = { term: "" };
 
-		this.onInputChange = this.onInputChange.bind(this);
+		this.onPokemonSelect = this.onPokemonSelect.bind(this);
 		this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 
-	onInputChange(event) {
+	onPokemonSelect(event) {
+		console.log(event);
 		this.setState({ term: event.target.value });
 	}
 
@@ -31,7 +32,7 @@ class SearchBar extends Component {
 					placeholder="Search for a pokemon..."
 					className="form-control searchbar"
 					value={this.state.term}
-					onChange={this.onInputChange}
+					onChange={() => this.props.onPokemonSelect(this.props.pokemon)}
 				/>
 				<span className="input-group-btn">
 					<button type="submit" className="btn btn-secondary">
