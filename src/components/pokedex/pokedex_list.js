@@ -16,8 +16,8 @@ const PokedexList = props => {
 
 	return (
 		<div className="table-header">
-			<th className="id-header">Id</th>
-			<th className="name-header">Name</th>
+			<div className="id-header">Id</div>
+			<div className="name-header">Name</div>
 			<div className="table">{pokemonList}</div>
 		</div>
 	);

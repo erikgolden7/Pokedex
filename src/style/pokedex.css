@@ -44,25 +44,31 @@ td {
 
 .id-header {
 	position: fixed;
-	width: 21px;
-	height: 16px;
-	background-color: white;
+	width: 33px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	height: 23px;
+	padding-top: 6px;
 	border-bottom: 1px solid black;
-	border-right: 1px solid black;
 }
 
 .name-header {
 	position: fixed;
-	margin-left: 34px;
-	width: 284px;
-	height: 16px;
+	margin-left: 33px;
+	width: 290px;
+	padding-left: 6px;
+	padding-top: 5px;
+	height: 23px;
+	font-size: 14px;
 	background-color: white;
-	border-bottom: 1px solid black;
+	border: 1px solid black;
+	font-weight: bold;
 }
 
 .tbl-name {
 	width: 284px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	font-size: 14px;
 }
 

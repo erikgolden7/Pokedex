@@ -12,6 +12,7 @@ class PokedexDetail extends Component {
 
 		this.state = {
 			prev: "",
+			toggle: false,
 			name: "",
 			picture: "",
 			picture_back: "",
@@ -59,6 +60,7 @@ class PokedexDetail extends Component {
 	selectedPokemonInfo(pokemon) {
 		if (this.state.prev !== pokemon.name) {
 			this.setState({ prev: pokemon.name });
+			this.setState({ toggle: false });
 
 			axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`).then(result => {
 				console.log(result.data);
@@ -69,12 +71,13 @@ class PokedexDetail extends Component {
 				this.setState({ weight: weight });
 				this.setType({ types });
 				this.setAbilities({ abilities });
+				this.setState({ toggle: true });
 			});
 		}
 
 		return (
 			<div>
-				{this.state.name ? (
+				{this.state.toggle ? (
 					<div className="detail-box">
 						<div className="img-container">
 							<img className="img" alt="" src={this.state.picture} />
